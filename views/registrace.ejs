@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrace na vodácký kurz 2023</title>
+    <link rel="stylesheet" href="/public/style.css">
+    <script src="/public/script.js"></script>
+</head>
+<body>
+    <h1>Registrace na vodácký kurz 2023</h1>
+    <form action="/submit-registration" method="post">
+        <label for="nick">Přezdívka osoby (2-20 znaků, jen čísla a písmena):</label>
+        <input type="text" id="nick" name="nick" required pattern="[a-zA-Z0-9]{2,20}"><br><br>
+
+        <label>Umíte plavat?</label>
+        <input type="radio" id="ano" name="je_plavec" value="1" required>
+        <label for="ano">Ano</label>
+        <input type="radio" id="ne" name="je_plavec" value="0" required>
+        <label for="ne">Ne</label><br><br>
+
+        <label for="kanoe_kamarad">S kým byste chtěli být na lodi (nepovinné):</label>
+        <input type="text" id="kanoe_kamarad" name="kanoe_kamarad"><br><br>
+
+        <button type="submit">Odeslat</button>
+        <button id="cancel-button" type="button">Storno</button>
+    </form>
+
+    
+</body>
+</html>
